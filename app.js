@@ -47,8 +47,7 @@ app.use('/api/v1',require('./routes/countryinfo'));
 
 app.use(function(error, req, res, next){
 	if (err.message
-    && (~err.message.indexOf('not found')
-    || (~err.message.indexOf('Cast to ObjectId failed')))) {
+    && (~err.message.indexOf('not found'))) {
     return next()
   }
 
