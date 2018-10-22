@@ -12,10 +12,12 @@
     "API",
     "nodejs"
   ],
+  "engines": {
+    "node": "4.1.1"
+  },
   "author": "shaban00",
   "license": "ISC",
   "dependencies": {
-    "async": "^2.6.1",
     "body-parser": "^1.18.3",
     "compression": "^1.7.3",
     "cookie-parser": "^1.4.3",
@@ -28,10 +30,7 @@
     "lodash": "^4.17.11",
     "method-override": "^3.0.0",
     "moment": "^2.22.2",
-    "morgan": "^1.9.1",
     "request": "^2.88.0",
-    "response-time": "^2.3.2",
-    "static-favicon": "^2.0.0-alpha",
     "statuses": "^1.5.0",
     "validator": "^10.8.0"
   }
