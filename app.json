@@ -1,0 +1,6 @@
+{
+  "name": "countryinfo",
+  "description": "An API to get information about countries",
+  "repository": "https://github.com/shaban00/countryinfo",
+  "keywords": ["node", "express", "heroku"]
+}

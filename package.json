@@ -13,7 +13,7 @@
     "nodejs"
   ],
   "engines": {
-    "node": "4.1.1"
+    "node": "4.7.0"
   },
   "author": "shaban00",
   "license": "ISC",
