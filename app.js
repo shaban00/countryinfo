@@ -41,7 +41,7 @@ app.use('/api/v1',require('./routes/countryinfo'));
 
 
 app.use(function(error, req, res, next){
-	if (err.message
+	if (err.message/accra
     && (~err.message.indexOf('not found'))) {
     return next()
   }
