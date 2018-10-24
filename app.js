@@ -1,6 +1,5 @@
 var express = require('express');
 var cookieParser = require('cookie-parser');
-var expressValidator = require('express-validator');
 var bodyParser = require('body-parser');
 var path = require('path');
 var helmet = require('helmet');
@@ -27,7 +26,6 @@ app.use(bodyParser.urlencoded({
 }));
 app.disable('x-powered-by')
 app.use(helmet.hidePoweredBy());
-app.use(expressValidator());
 app.use(cookieParser());
 
 
