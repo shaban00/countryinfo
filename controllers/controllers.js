@@ -20,7 +20,7 @@ exports.getAllCountries = (req, res) => {
 exports.getCountryFields = (req, res) => {
     let query = req.query;
 
-    if (Object.keys(query).length > 1) {
+    if (Object.keys(query).length > 0) {
         let { error, fields } = CountryField(query);
 
         if (error === true) {
@@ -49,7 +49,7 @@ exports.getCountryFields = (req, res) => {
 exports.getCountrySearch = (req, res) => {
     let query = req.query;
 
-    if (Object.keys(query).length > 1) {
+    if (Object.keys(query).length > 0) {
         if (query.name) {
             let result = _.filter(countries, (item) => {
                 let name = item.name.common || item.name.official;
