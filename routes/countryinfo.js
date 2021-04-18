@@ -1,21 +1,21 @@
-var express = require('express');
-var countryinfo = express.Router();
-var countryinfocontrollers = require('../controllers/infocontrollers');
+const express = require("express");
+const router = express.Router();
+const countryinfocontrollers = require("../controllers/controllers");
 
-
-
-countryinfo.get('/', function(req, res){
-	countryinfocontrollers.getIndex(req, res)
+router.get("/", (req, res) => {
+    countryinfocontrollers.getIndex(req, res);
 });
 
-countryinfo.get('/countryinfo/', function(req, res){
-	countryinfocontrollers.getAllCountries(req, res);
+router.get("/countryinfo/all", (req, res) => {
+    countryinfocontrollers.getAllCountries(req, res);
 });
 
-countryinfo.get('/countryinfo/capital/:capital', function(req, res){
-	countryinfocontrollers.capital(req, res, req.params.capital);
+router.get("/countryinfo/fields", (req, res) => {
+    countryinfocontrollers.getCountryFields(req, res);
 });
 
+router.get("/countryinfo/search", (req, res) => {
+    countryinfocontrollers.getCountrySearch(req, res);
+});
 
-
-module.exports = countryinfo;
+module.exports = router;
