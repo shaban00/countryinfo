@@ -1,6 +1,6 @@
-import countries from '../data/countries.json'
-import states from '../data/states.json'
-import cities from '../data/cities.json'
+const countries = require('../data/countries.json')
+const states = require('../data/states.json')
+const cities = require('../data/cities.json')
 
 const getIndex = (req, res) => {
     res.status(200).json({
