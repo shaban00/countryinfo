@@ -1,7 +1,7 @@
-import express from 'express'
-import cookieParser from 'cookie-parser'
-import bodyParser from 'body-parser'
-import helmet from 'helmet'
+import express from "express"
+import cookieParser from "cookie-parser"
+import bodyParser from "body-parser"
+import helmet from "helmet"
 
 /*
 	Express server
@@ -25,7 +25,7 @@ app.use(
         extended: false,
     })
 )
-app.disable('x-powered-by')
+app.disable("x-powered-by")
 app.use(helmet.hidePoweredBy())
 app.use(cookieParser())
 
@@ -34,16 +34,16 @@ app.use(cookieParser())
 
 */
 
-app.use('/api/v1', require('./routes/countryinfo'))
+app.use("/api/v1", require("./routes/countryinfo"))
 
 /* Client route error page */
 
-app.all('/*', (req, res) => {
+app.all("/*", (req, res) => {
     res.status(200).json({
-        message: 'This is an API not a website',
+        message: "This is an API not a website",
         request_method: `${req.method}`,
         error_status: 404,
-        error: 'Invalid url',
+        error: "Invalid url",
         error_url: `${req.headers.host}` + `${req.url}`,
     })
 })

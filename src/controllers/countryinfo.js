@@ -1,16 +1,16 @@
-const countries = require('../data/countries.json')
-const states = require('../data/states.json')
-const cities = require('../data/cities.json')
+import countries from "../data/countries.json"
+import states from "../data/states.json"
+import cities from "../data/cities.json"
 
 const getIndex = (req, res) => {
     res.status(200).json({
         message:
-            'Welcome to countryinfo where you get a lot of information about the countries you want',
+            "Welcome to countryinfo where you get a lot of information about the countries you want",
     })
 }
 
 const getCountryByQueryField = (req, res) => {
-    const allow_query_params = ['country_name', 'country_code']
+    const allow_query_params = ["country_name", "country_code"]
     const req_keys = Object.keys(req.query)
 
     const allowed = req_keys.some((key) => {
@@ -46,10 +46,10 @@ const getCountryByQueryField = (req, res) => {
 
 const getStateByQueryField = (req, res) => {
     const allow_query_params = [
-        'country_name',
-        'country_code',
-        'state_name',
-        'state_code',
+        "country_name",
+        "country_code",
+        "state_name",
+        "state_code",
     ]
     const req_keys = Object.keys(req.query)
 
@@ -95,18 +95,18 @@ const getStateByQueryField = (req, res) => {
         }
     } else {
         res.status(200).json({
-            message: 'Invalid query parameter(s)',
+            message: "Invalid query parameter(s)",
         })
     }
 }
 
 const getCityByQueryField = (req, res) => {
     const allow_query_params = [
-        'country_name',
-        'country_code',
-        'state_name',
-        'state_code',
-        'city_name',
+        "country_name",
+        "country_code",
+        "state_name",
+        "state_code",
+        "city_name",
     ]
     const req_keys = Object.keys(req.query)
 
@@ -166,7 +166,7 @@ const getCityByQueryField = (req, res) => {
         }
     } else {
         res.status(200).json({
-            message: 'Invalid query parameter(s)',
+            message: "Invalid query parameter(s)",
         })
     }
 }
