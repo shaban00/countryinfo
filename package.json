@@ -5,6 +5,8 @@
   "main": "app.js",
   "scripts": {
     "start": "node dist/app.js",
+    "build": "npm run clean && babel src --out-dir dist",
+    "clean": "rm -rf dist/",
     "dev": "nodemon --exec babel-node src/app.js",
     "check": "prettier --check src/**/*.+(ts|tsx|scss)",
     "format": "prettier --write \"**/*.+(js|jsx|scss)\""
