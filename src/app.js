@@ -2,6 +2,7 @@ import express from "express"
 import cookieParser from "cookie-parser"
 import bodyParser from "body-parser"
 import helmet from "helmet"
+import cors from "cors"
 
 /*
 	Express server
@@ -28,6 +29,7 @@ app.use(
 app.disable("x-powered-by")
 app.use(helmet.hidePoweredBy())
 app.use(cookieParser())
+app.use(cors())
 
 /*
 	Application routes
