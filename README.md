@@ -1,89 +1,180 @@
-## __API for getting information about countries__
+## **API for getting information about countries**
 
+**Usage**
 
-__Usage__
+Get All Countries
 
-```
-Method: [GET]
+```bash
+url: https://countryinfos.herokuapp.com/api/v1/countries
 
-Url: https://countryinfos.herokuapp.com/api/v1/countryinfo/all
-
-Output: Get all countries
-
-Response: {
-    message: "",
-    data: [
+response: {
+    countries: [
         {
-            name: {
-                "official": "",
-                "common": ""
+        "id": "",
+        "name": "",
+        "iso3": "",
+        "iso2": "",
+        "numeric_code": "",
+        "phone_code": "",
+        "capital": "",
+        "currency": "",
+        "currency_name": "",
+        "currency_symbol": "",
+        "tld": "",
+        "native": "",
+        "region": "",
+        "subregion": "",
+        "timezones": [
+            {
+                "zoneName": "",
+                "gmtOffset": "",
+                "gmtOffsetName": "",
+                "abbreviation": "",
+                "tzName": ""
             },
-            tld: [
-                ""
-            ],
-            cca2: "",
-            cca3: "",
-            ccn3: "",
-            currency: "",
-            callingCode: [
-                ""
-            ],
-            capital: "",
-            independent: "",
-            latlng: "",
-            region: "",
-            nativeLanguage: "",
-            officialLanguage: "",
-            languages: [
-                ""
-            ],
-            nationality: "",
-            borders: [
-                ""
-            ],
-            area: "",
-            landSize: "",
-            population: "",
-            religions: [
-                ""
-            ],
-            president: "",
-            flag: "",
-            tourSites: [
-                {
-                    name: "",
-                    location: ""
-                },...
-            ]
-        },...
-    ],
-    success_code: "0002"
+            ...
+        ],
+        "translations": {
+
+        },
+        "latitude": "",
+        "longitude": "",
+        "emoji": "",
+        "emojiU": ""
+    },
+    ...
+    ]
 }
 
-
 ```
 
-##
+Get Country Using Query Parameters
 
-```
-Method: [GET]
+```bash
+url: https://countryinfos.herokuapp.com/api/v1/countries
+allowed_query_parameters = ["country_name", "country_code"]
 
-Url: https://countryinfos.herokuapp.com/api/v1/countryinfo/fields
+eg: https://countryinfos.herokuapp.com/api/v1/countries?country_name=Ghana
 
-example: localhost:3000/api/v1/countryinfo/fields?field=["area", "population", "name", "currency"]
+eg: https://countryinfos.herokuapp.com/api/v1/countries?country_code=GH
 
-Available field parameters: ["name", "tld", "cca2", "cca3", "ccn3", "currency", "callingCode", "capital", "independent", "latlng", "region", "nativeLanguage", "officialLanguage", "languages", "nationality", "borders", "area", "landSize", "population", "religions", "president", "flag", "tourSites"]
 
-Output: Get all countries with fields
-
-Response : {
-    message: "",
-    data: [
+response: {
+    countries: [
         {
+        "id": "",
+        "name": "",
+        "iso3": "",
+        "iso2": "",
+        "numeric_code": "",
+        "phone_code": "",
+        "capital": "",
+        "currency": "",
+        "currency_name": "",
+        "currency_symbol": "",
+        "tld": "",
+        "native": "",
+        "region": "",
+        "subregion": "",
+        "timezones": [
+            {
+                "zoneName": "",
+                "gmtOffset": "",
+                "gmtOffsetName": "",
+                "abbreviation": "",
+                "tzName": ""
+            },
+            ...
+        ],
+        "translations": {
 
-        },...
-    ],
-    success_code: "0002"
+        },
+        "latitude": "",
+        "longitude": "",
+        "emoji": "",
+        "emojiU": ""
+        }
+    ]
 }
 
+```
+
+Get States of Country
+
+```bash
+url: https://countryinfos.herokuapp.com/api/v1/states
+
+allowed_query_parameters = ["country_name", "country_code", "state_name", "state_code"]
+
+eg: https://countryinfos.herokuapp.com/api/v1/states?country_name=Ghana
+
+response: {
+    state: [
+        {
+        "id": "",
+        "name": "",
+        "country_id": "",
+        "country_code": "",
+        "country_name": "",
+        "state_code": "",
+        "type": "",
+        "latitude": "",
+        "longitude": ""
+        },
+        {
+        "id": "",
+        "name": "",
+        "country_id": "",
+        "country_code": "",
+        "country_name": "",
+        "state_code": "",
+        "type": "",
+        "latitude": "",
+        "longitude": ""
+        },
+    ...
+    ]
+}
+```
+
+Get Cities of State
+
+```bash
+url: https://countryinfos.herokuapp.com/api/v1/cities
+
+allowed_query_parameters = ["country_name", "country_code", "state_name", "state_code", "city_name"]
+
+eg: https://countryinfos.herokuapp.com/api/v1/cities?country_name=Ghana
+
+response: {
+    city: [
+        {
+            "id": "",
+            "name": "",
+            "state_id": "",
+            "state_code": "",
+            "state_name": "",
+            "country_id": "",
+            "country_code": "",
+            "country_name": "",
+            "latitude": "",
+            "longitude": "",
+            "wikiDataId": ""
+        },
+        {
+            "id": "",
+            "name": "",
+            "state_id": "",
+            "state_code": "",
+            "state_name": "",
+            "country_id": "",
+            "country_code": "",
+            "country_name": "",
+            "latitude": "",
+            "longitude": "",
+            "wikiDataId": ""
+        },
+        ...
+    ]
+}
 ```
