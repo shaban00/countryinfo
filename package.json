@@ -40,5 +40,8 @@
     "@babel/preset-react": "^7.22.15",
     "nodemon": "^3.0.1",
     "prettier": "^3.0.3"
+  },
+  "engines": {
+    "node": ">=16.0.0"
   }
 }
