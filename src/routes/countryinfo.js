@@ -1,23 +1,18 @@
 import express from "express"
-import {
-    getIndex,
-    getCountryByQueryField,
-    getStateByQueryField,
-    getCityByQueryField,
-} from "../controllers/countryinfo"
+import { getCountry, getState, getCity } from "../controllers/countryinfo"
 
 const router = express.Router()
 
 router.get("/countries", (req, res) => {
-    getCountryByQueryField(req, res)
+    getCountry(req, res)
 })
 
 router.get("/states", (req, res) => {
-    getStateByQueryField(req, res)
+    getState(req, res)
 })
 
 router.get("/cities", (req, res) => {
-    getCityByQueryField(req, res)
+    getCity(req, res)
 })
 
 module.exports = router

@@ -1,8 +1,8 @@
 {
   "name": "countryinfo",
   "version": "1.0.0",
-  "description": "An API to get information about countries",
-  "main": "app.js",
+  "description": "An API to get information about countries, states and cities",
+  "main": "dist/app.js",
   "scripts": {
     "start": "node dist/app.js",
     "build": "npm run clean && babel src --out-dir dist --copy-files",
@@ -12,29 +12,31 @@
     "format": "prettier --write \"**/*.+(js|jsx|scss)\""
   },
   "keywords": [
-    "country",
+    "Countries",
+    "States",
+    "Cities",
     "API",
-    "nodejs"
+    "Express.js",
+    "Node.js"
   ],
-  "author": "shaban00",
+  "author": "Shaban Mohammedsaani Hassan (shaban00)",
   "license": "MIT",
   "dependencies": {
-    "body-parser": "^1.19.2",
-    "compression": "^1.7.3",
+    "body-parser": "^1.20.2",
     "cookie-parser": "^1.4.6",
-    "core-js": "3.21.1",
+    "core-js": "2",
     "cors": "^2.8.5",
-    "express": "^4.17.3",
-    "helmet": "^5.0.2"
+    "express": "^4.18.2",
+    "helmet": "^7.0.0"
   },
   "devDependencies": {
-    "@babel/cli": "^7.17.6",
-    "@babel/core": "^7.17.8",
-    "@babel/node": "^7.16.8",
+    "@babel/cli": "^7.22.15",
+    "@babel/core": "^7.22.19",
+    "@babel/node": "^7.22.19",
     "@babel/polyfill": "^7.12.1",
-    "@babel/preset-env": "^7.16.11",
-    "@babel/preset-react": "^7.16.7",
-    "nodemon": "^2.0.15",
-    "prettier": "^2.6.0"
+    "@babel/preset-env": "^7.22.15",
+    "@babel/preset-react": "^7.22.15",
+    "nodemon": "^3.0.1",
+    "prettier": "^3.0.3"
   }
 }
