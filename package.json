@@ -2,9 +2,9 @@
   "name": "countryinfo",
   "version": "1.0.0",
   "description": "An API to get information about countries, states and cities",
-  "main": "dist/app.js",
+  "main": "app.js",
   "scripts": {
-    "start": "node dist/app.js",
+    "start": "node app.js",
     "build": "npm run clean && babel src --out-dir dist --copy-files",
     "docker": "docker compose -f docker-compose.yml up -d --force-recreate --build",
     "docker:down": "docker compose -f docker-compose.yml down",
