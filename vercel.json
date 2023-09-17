@@ -1,15 +1,7 @@
 {
-    "version": 2,
-    "builds": [
-      {
-        "src": "./src/app.js",
-        "use": "@vercel/node"
-      }
-    ],
-    "routes": [
-      {
-        "src": "/(.*)",
-        "dest": "./dist/app.js"
-      }
-    ]
-  }
+    "$schema": "https://openapi.vercel.sh/vercel.json",
+    "buildCommand": "npm run build",
+    "installCommand": "npm install",
+    "framework": null,
+    "outputDirectory": "./"
+}
