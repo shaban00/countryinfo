@@ -1,0 +1,9 @@
+version: '3.2'
+
+services:
+  api:
+    build: .
+    container_name: api
+    command: npm start
+    ports:
+      - 3000:3000

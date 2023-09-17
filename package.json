@@ -6,6 +6,8 @@
   "scripts": {
     "start": "node dist/app.js",
     "build": "npm run clean && babel src --out-dir dist --copy-files",
+    "docker": "docker compose -f docker-compose.yml up -d --force-recreate --build",
+    "docker:down": "docker compose -f docker-compose.yml down",
     "clean": "rm -rf dist/",
     "dev": "nodemon --exec babel-node src/app.js",
     "check": "prettier --check src/**/*.+(ts|tsx|scss)",
